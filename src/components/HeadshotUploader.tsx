@@ -77,7 +77,7 @@ export default function HeadshotUploader({ onClose, onSave }: Props) {
       category: form.category,
       location: form.location,
       bio: form.bio,
-      photoUrl: uploadedUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(form.name)}&size=400&background=1a1a2e&color=b8972e`,
+      photoUrl: uploadedUrl || `https://ui-avatars.com/api/?name=${encodeURIComponent(form.name)}&size=400&background=1c1917&color=b8972e`,
       tags: form.tags.split(",").map((t) => t.trim()).filter(Boolean),
       featured: false,
     };

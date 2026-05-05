@@ -10,8 +10,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Aileen Talent Agency",
-  description: "Connecting exceptional talent with world-class brands and productions in Las Vegas.",
+  title: "Aileen Talent",
+  description: "Las Vegas' premier talent agency for brand ambassadors, hostesses, and models.",
 };
 
 export default function RootLayout({

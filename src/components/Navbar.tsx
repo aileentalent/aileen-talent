@@ -19,7 +19,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-tight text-[#1a1a2e]">
-            AILEEN<span className="text-[#b8972e]"> TALENT</span>
+            Aileen<span className="text-[#b8972e]"> Talent</span>
           </span>
         </Link>
 

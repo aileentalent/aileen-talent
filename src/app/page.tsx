@@ -1,8 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { talents } from "@/lib/talent-data";
-
-const featured = talents.filter((t) => t.featured);
 
 const stats = [
   { value: "200+", label: "Talents Represented" },
@@ -87,36 +84,13 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: photo grid */}
-          <div className="hidden lg:grid grid-cols-2 gap-3 h-[580px]">
-            <div className="relative rounded-2xl overflow-hidden row-span-2">
-              <Image
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=700&fit=crop&crop=face"
-                alt="Brand Ambassador"
-                fill
-                className="object-cover object-top"
-                sizes="20vw"
-              />
-            </div>
-            <div className="relative rounded-2xl overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=340&fit=crop&crop=face"
-                alt="Hostess"
-                fill
-                className="object-cover object-top"
-                sizes="20vw"
-              />
-            </div>
-            <div className="relative rounded-2xl overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=340&fit=crop&crop=face"
-                alt="Model"
-                fill
-                className="object-cover object-top"
-                sizes="20vw"
-              />
-            </div>
-          </div>
+          {/* Right: photo */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero-event.jpg"
+            alt="Aileen Talent"
+            className="hidden lg:block w-full h-[580px] object-cover object-center rounded-2xl"
+          />
         </div>
       </section>
 
@@ -131,53 +105,6 @@ export default function HomePage() {
               </div>
             ))}
           </dl>
-        </div>
-      </section>
-
-      {/* Featured Talent */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <p className="text-[#b8972e] text-xs font-semibold tracking-[0.2em] uppercase mb-2">Spotlight</p>
-            <h2 className="text-4xl font-bold text-[#1c1917]">Featured Talent</h2>
-          </div>
-          <Link
-            href="/talent"
-            className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-[#b8972e] hover:underline"
-          >
-            View all talent
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {featured.map((talent) => (
-            <div key={talent.id} className="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-gray-100">
-              <Image
-                src={talent.photoUrl}
-                alt={talent.name}
-                fill
-                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 100vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block px-2.5 py-0.5 bg-[#b8972e] text-white text-xs font-semibold rounded-full mb-2">
-                  {talent.category}
-                </span>
-                <p className="text-white text-xl font-bold">{talent.name}</p>
-                <p className="text-white/70 text-sm mt-0.5">{talent.location}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8 text-center sm:hidden">
-          <Link href="/talent" className="text-sm font-medium text-[#b8972e] hover:underline">
-            View all talent →
-          </Link>
         </div>
       </section>
 

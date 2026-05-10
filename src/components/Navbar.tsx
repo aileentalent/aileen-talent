@@ -6,8 +6,9 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/talent", label: "Our Talent" },
-  { href: "/contact", label: "Contact" },
+  { href: "/talent", label: "Services" },
+  { href: "/join", label: "Join the Team" },
+  { href: "/about", label: "About Us" },
 ];
 
 export default function Navbar() {
